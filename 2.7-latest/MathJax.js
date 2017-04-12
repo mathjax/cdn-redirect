@@ -12,7 +12,7 @@
       var newScript = document.createElement('script');
       newScript.src = newMathJax + src.substr(n);
       script.parentNode.replaceChild(newScript, script);
-      console.log('WARNING: cdn.mathjax.org has been retired. Check https://www.mathjax.org/cdn-shutting-down/ for migration tips.')
+      console.warn('WARNING: cdn.mathjax.org has been retired. Check https://www.mathjax.org/cdn-shutting-down/ for migration tips.')
       break;
     }
   }
