@@ -11,7 +11,7 @@
   }
   if (document.currentScript) {
     var script = document.currentScript;
-    replaceScript(script, script.src.split('//')[1]);
+    replaceScript(script, script.src.replace(/^(https?:)?\/\//i, ''));
   } else {
     var scripts = document.getElementsByTagName('script');
     for (var i = 0; i < scripts.length; i++) {
