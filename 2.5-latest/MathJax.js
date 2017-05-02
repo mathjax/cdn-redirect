@@ -16,7 +16,7 @@
     var scripts = document.getElementsByTagName('script');
     for (var i = 0; i < scripts.length; i++) {
       var script = scripts[i];
-      var src = script.getAttribute('src') || '//';
+      var src = script.src || '//';
       var rawSrc = src.split('//')[1];
       if (rawSrc.substr(0, n) === oldMathJax) {
         replaceScript(script, rawSrc);
