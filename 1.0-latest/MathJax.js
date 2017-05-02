@@ -1,6 +1,7 @@
 (function () {
   var newMathJax = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/1.1a/MathJax.js';
   var oldMathJax = 'cdn.mathjax.org/mathjax/1.0-latest/MathJax.js';
+  var n = oldMathJax.length;
 
   var replaceScript = function (script, rawSrc) {
     var newScript = document.createElement('script');
