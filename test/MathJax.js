@@ -3,6 +3,9 @@
   var oldMathJax = 'rawgit.com/mathjax/cdn-redirect/master/test/MathJax.js';
 
   var replaceScript = function (script, src) {
+    //
+    //  Make redirected script
+    //
     var newScript = document.createElement('script');
     newScript.src = newMathJax + src.replace(/.*?(\?|$)/, '$1');
     //
@@ -16,7 +19,9 @@
     //
     while (script.firstChild) newScript.appendChild(script.firstChild);
     //
-    //  Move script id
+    //  Copy script id
+    //
+    if (script.id != null) newScript.id = script.id;
     //
     //  Replace original script with new one
     //
